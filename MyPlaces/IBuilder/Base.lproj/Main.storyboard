@@ -293,6 +293,17 @@
                                     <action selector="doneButtonPressed" destination="ny6-Ix-InI" eventType="touchUpInside" id="4Dz-Jn-Hz6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbz-jb-KgC">
+                                <rect key="frame" x="182" y="772" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="IMQ-ZD-u1K"/>
+                                    <constraint firstAttribute="height" constant="50" id="K7r-Vx-HJ5"/>
+                                </constraints>
+                                <state key="normal" image="GetDirection"/>
+                                <connections>
+                                    <action selector="goButtonPressed" destination="ny6-Ix-InI" eventType="touchUpInside" id="Nsh-G4-8lJ"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkR-rp-PLd">
                                 <rect key="frame" x="344" y="696" width="30" height="30"/>
                                 <constraints>
@@ -313,6 +324,7 @@
                             <constraint firstAttribute="bottom" secondItem="f2X-m4-swg" secondAttribute="bottom" id="5n0-5c-BrU"/>
                             <constraint firstItem="C3I-aS-gBH" firstAttribute="centerX" secondItem="YuL-gR-p49" secondAttribute="centerX" id="6eP-1x-7XW"/>
                             <constraint firstItem="qJJ-BQ-Wdh" firstAttribute="centerY" secondItem="YuL-gR-p49" secondAttribute="centerY" constant="-20" id="8fy-eW-fqc"/>
+                            <constraint firstItem="JWV-Ep-WUM" firstAttribute="bottom" secondItem="Mbz-jb-KgC" secondAttribute="bottom" constant="40" id="AYP-40-Xvk"/>
                             <constraint firstItem="f2X-m4-swg" firstAttribute="leading" secondItem="JWV-Ep-WUM" secondAttribute="leading" id="JYb-ij-pN7"/>
                             <constraint firstItem="JWV-Ep-WUM" firstAttribute="bottom" secondItem="zkR-rp-PLd" secondAttribute="bottom" constant="136" id="V33-Gd-V47"/>
                             <constraint firstItem="JWV-Ep-WUM" firstAttribute="trailing" secondItem="Q0W-c2-My3" secondAttribute="trailing" constant="40" id="Y5i-ll-M4e"/>
@@ -326,12 +338,14 @@
                             <constraint firstItem="JWV-Ep-WUM" firstAttribute="bottom" secondItem="C3I-aS-gBH" secondAttribute="bottom" constant="40" id="mYp-nn-SVB"/>
                             <constraint firstItem="Q0W-c2-My3" firstAttribute="leading" secondItem="JWV-Ep-WUM" secondAttribute="leading" constant="344" id="meD-Pn-lUZ"/>
                             <constraint firstItem="JWV-Ep-WUM" firstAttribute="bottom" secondItem="Q0W-c2-My3" secondAttribute="bottom" constant="748" id="xMN-lx-fB6"/>
+                            <constraint firstItem="Mbz-jb-KgC" firstAttribute="centerX" secondItem="YuL-gR-p49" secondAttribute="centerX" id="z2D-t6-vO6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JWV-Ep-WUM"/>
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="GWX-Zx-U93" id="oaS-Td-3he"/>
                         <outlet property="doneButton" destination="C3I-aS-gBH" id="f8p-L6-7tQ"/>
+                        <outlet property="goButton" destination="Mbz-jb-KgC" id="U2t-tJ-jve"/>
                         <outlet property="mapPinImage" destination="qJJ-BQ-Wdh" id="odh-cN-c8r"/>
                         <outlet property="mapView" destination="f2X-m4-swg" id="1yy-UJ-ZpV"/>
                     </connections>
@@ -518,11 +532,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ekg-z0-6fK"/>
+        <segue reference="v8u-S7-vTF"/>
         <segue reference="wfY-uZ-lia"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AZ" width="25" height="24"/>
+        <image name="GetDirection" width="50" height="50"/>
         <image name="Photo" width="195" height="196"/>
         <image name="PlaceHolder" width="100" height="100"/>
         <image name="camcel" width="128" height="128"/>
